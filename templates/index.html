@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Aarog - Pedicting Chronic Disease in Human</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/materialize.css')}}" type="text/css" rel="stylesheet"
+        media="screen,projection" />
+    <link href="{{ url_for('static', filename='css/style.css')}}" type="text/css" rel="stylesheet"
+        media="screen,projection" />
+
+</head>
+
+<body>
+
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">आरोग</a>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">Predict The Possibility of Chronic Disease</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">आरोग्यं परमं भाग्यं स्वास्थ्यं सर्वार्थसाधनम|</h5>
+            </div>
+
+            <div style="color:black;" class="container">
+
+
+                <div style="color:black;" class="ml-container">
+                    <form action="{{ url_for('predict') }}" method="POST">
+                        <fieldset>
+                            <legend>
+                                <h2 class='container-heading'><span class="heading_font">Chronic Kidney Disease
+                                        Prediction</span></h2>
+                            </legend>
+                            <br>
+                            <br>
+                            <h6>Specific Gravity</h6>
+                            <input id="first" name="sg" placeholder="Ex: (1.005,1.010,1.015,1.020,1.025)"
+                                required="required">
+                            <br>
+                            <h6>Hyper Tension</h6>
+                            <input id="second" name="htn" placeholder="Yes = 1, No=0" required="required">
+                            <br>
+                            <h6>Hemoglobin</h6>
+                            <input id="third" name="hemo" placeholder="in gms" required="required">
+                            <br>
+                            <h6>Diabetes Mellitus</h6>
+                            <input id="fourth" name="dm" placeholder="Yes = 1, No=0" required="required">
+                            <br>
+                            <h6>Albumin</h6>
+                            <input id="fifth" name="al" placeholder="(0,1,2,3,4,5)" required="required">
+                            <br>
+                            <h6>Appetite</h6>
+                            <input id="sixth" name="appet" placeholder="Good = 1, Poor = 0" required="required">
+                            <br>
+                            <h6>Red Blood Cell Count</h6>
+                            <input id="seventh" name="rc" placeholder="in Millions/cmm" required="required">
+                            <h6>Pus Cell</h6>
+                            <input id="eight" name="pc" placeholder="Normal = 0, Abnormal = 1" required="required">
+                            <br>
+                            <br>
+                            <br>
+                            <button id="sub" class="btn-large waves-effect waves-light orange"
+                                type="submit ">Submit</button>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </fieldset>
+
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="section">
+
+                    <!--   Icon Section   -->
+                    <div class="row">
+                        <div class="col s12 m4">
+                            <div class="icon-block">
+                                <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+                                <h5 class="center">Lightning Fast Results</h5>
+
+                                <p class="light">Quick Prediction by Machine Algorithms for as short as 1 micro seconds.
+                                    The prediction is just a click away.</p>
+                            </div>
+                        </div>
+
+                        <div class="col s12 m4">
+                            <div class="icon-block">
+                                <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+                                <h5 class="center">User Experience Focused</h5>
+
+                                <p class="light">Keeping user in mind, the UI has been designed very simple so anyonone
+                                    can use it without any difficulty.</p>
+                            </div>
+                        </div>
+
+                        <div class="col s12 m4">
+                            <div class="icon-block">
+                                <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+                                <h5 class="center">Large User Database</h5>
+
+                                <p class="light">A large database of patients is being used to improve the predictions
+                                    and modify the system with new data being feed to the server regulary.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <br><br>
+            </div>
+
+            <footer class="page-footer orange">
+                    <div class="row center">
+                        <span>Made with ❤️ by Captain Phoenix.</span>
+                    </div>
+            </footer>
+
+            <!--  Scripts-->
+            <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script src="js/materialize.js"></script>
+            <script src="js/init.js"></script>
+            <script src="/js/index.js"></script>
+
+</body>
+
+</html>
